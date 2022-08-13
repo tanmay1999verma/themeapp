@@ -1,0 +1,45 @@
+ <p>
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>{{title}}</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+</p>
+<div class="container">
+  <mat-card>
+    <div class="toggle">
+      <mat-slide-toggle [(ngModel)]="isChecked" (change)="changed($event)">
+        <mat-icon>{{mode}}</mat-icon>
+      </mat-slide-toggle>
+    </div>
+    <mat-card-title>
+      Card Title
+    </mat-card-title>
+    <mat-card-subtitle>Theme changer</mat-card-subtitle>
+    <form>
+      <mat-form-field>
+        <input matInput type="email" placeholder="Email">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Name">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="password" placeholder="Password">
+      </mat-form-field>
+      <button mat-raised-button color="primary">Submit</button>
+    </form>
+    <mat-card-subtitle>
+      Signup
+    </mat-card-subtitle>
+  </mat-card>
+</div>
+<app-user></app-user>
+<app-userlist></app-userlist>

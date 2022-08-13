@@ -1,0 +1,11 @@
+<app-userdetails [user]="selectedUser"></app-userdetails>
+<h2>All Users</h2>
+<mat-list class="heroes">
+  <mat-list-item *ngFor="let user of users">
+    <button mat-flat-button type="button" color="basic" (click)="onSelect(user)">
+      <span class="name">{{user.name}}</span>
+    </button>
+<!--     <button mat-raised-button type="button" class="delete" title="delete hero"-->
+<!--  (click)="delete(user)">x</button>-->
+  </mat-list-item>
+</mat-list>
